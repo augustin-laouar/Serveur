@@ -13,7 +13,7 @@ public class TestDessin {
 
           //  D.afficher();
             //test pour dessiner un trait
-           Point p2 = new Point(460,415);
+          /* Point p2 = new Point(460,415);
            Point p3 = new Point(500,425);
            Point p4 = new Point(480,435);
             Point p5 = new Point(550,445);
@@ -24,10 +24,30 @@ public class TestDessin {
             f1.ListePoints.add(p3);
             f1.ListePoints.add(p4);
             f1.ListePoints.add(p5);
-            f1.ListePoints.add(p6);
+            f1.ListePoints.add(p6);*/
 
-            D.dessiner(f1);
+          //test pour un cercle   2;rayon;point
+               /* String cercle= "2;50;410,460";
+                D.dessiner(cercle);
+                D.afficher();*/
+
+            //test pour un polygone  3;nbPoints;points
+            String polygone="3;6;410,460;460,415;500,425;480,435;550,445;410,460";
+            D.dessiner(polygone);
             D.afficher();
+
+
+
+          /* test pour un trait
+            String trait ="1;2;410,450;480,525";
+            D.dessiner(trait);
+            D.afficher();
+
+           */
+
+
+
+
         }
 
         catch(InterruptedException e){

@@ -49,12 +49,12 @@ public class Dessin extends Frame {
         graphics.setColor(Color.white);
         graphics.fillRect(0,0,width,height);
     }
-    public void dessiner(Forme f){
+    public void dessiner(String s){
 
         ExpertCercleCOR e1 = new ExpertCercleCOR(null);
         ExpertPolygoneCOR e2 = new ExpertPolygoneCOR(e1);
         ExpertTraitCOR e3= new ExpertTraitCOR(e2);
-        e3.DessinerForme(f,graphics);
+        e3.DessinerForme(s,graphics);
 
 
 

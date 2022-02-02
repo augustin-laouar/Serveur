@@ -8,11 +8,15 @@ public class ExpertCercleCOR extends ExpertDessinCOR {
     }
 
     @Override
-    public boolean Dessiner(Forme f, Graphics2D g) {
-        if(f instanceof Cercle){
-            Cercle c = (Cercle)f;
-            Shape s = new Ellipse2D.Double(c.ListePoints.get(0).getX(),c.ListePoints.get(0).getY(),c.getRayon(),c.getRayon());
-            g.draw(s);
+    public boolean Dessiner(String s, Graphics2D g) {
+        //pour un cercle on envoi sous forme  : 2;rayon;centre
+        String sousChaine[]= s.split(";");
+
+
+        if(sousChaine[0].equals("2")){
+            String point[] =sousChaine[2].split(",") ;
+            Shape c = new Ellipse2D.Double(Double.parseDouble(point[0]),Double.parseDouble(point[1]),Double.parseDouble(sousChaine[1]),Double.parseDouble(sousChaine[1]));
+            g.draw(c);
             return true;
         }
         return false;

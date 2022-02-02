@@ -8,12 +8,12 @@ public abstract class ExpertDessinCOR extends ExpertDessin {
         this.suivant = suivant;
     }
 
-    public boolean DessinerForme(Forme f, Graphics2D g){ //tu dois utiliser cette methode
+    public boolean DessinerForme(String s, Graphics2D g){ //tu dois utiliser cette methode
         boolean result;
-        result = Dessiner(f,g);
+        result = Dessiner(s,g);
         if(!result){
             if(this.suivant != null){
-                return this.suivant.DessinerForme(f,g);
+                return this.suivant.DessinerForme(s,g);
             }
             else{
                 return false;
@@ -23,5 +23,5 @@ public abstract class ExpertDessinCOR extends ExpertDessin {
             return result;
         }
     }
-    public abstract boolean Dessiner(Forme f, Graphics2D g);
+    public abstract boolean Dessiner(String s,Graphics2D g);
 }
