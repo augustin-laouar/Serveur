@@ -4,8 +4,8 @@ import java.text.Normalizer;
 
 public class TestDessin {
     public static void main(String args[]){
-        try {
-            Dessin D = new Dessin("Test de dessin",1000,1000);
+        //try {
+           /*Dessin D = new Dessin("Test de dessin",1000,1000);
             Ecouteur f = new Ecouteur();
             D.addWindowListener(f);
             Point p = new Point(410,460);
@@ -32,9 +32,9 @@ public class TestDessin {
                 D.afficher();*/
 
             //test pour un polygone  3;nbPoints;points
-            String polygone="3;6;410,460;460,415;500,425;480,435;550,445;410,460";
+           /* String polygone="3;6;410,460;460,415;500,425;480,435;550,445;410,460";
             D.dessiner(polygone);
-            D.afficher();
+            D.afficher();*/
 
 
 
@@ -47,12 +47,16 @@ public class TestDessin {
 
 
 
+        // test de communication
+            Communication com =new Communication(9111,"127.0.0.1");
+           com.communiquer();
 
-        }
+
+      /* }
 
         catch(InterruptedException e){
             System.out.println("Erreur\n");
-        }
+        }*/
 
     }
 }

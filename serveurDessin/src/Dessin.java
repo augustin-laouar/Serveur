@@ -45,6 +45,7 @@ public class Dessin extends Frame {
     public void afficher(){
         strategie.show();
     }
+
     public void effacer(){
         graphics.setColor(Color.white);
         graphics.fillRect(0,0,width,height);
