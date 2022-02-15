@@ -23,11 +23,16 @@ public class Interlocuteur extends Thread {
             Dessin D = new Dessin("Test de dessin",1000,1000);
             Ecouteur f = new Ecouteur();
             D.addWindowListener(f);
-            // while(!Thread.interrupted()) {
-            chaineRecu = fluxEntrant.readLine();
-            System.out.println("Les coordonnée qui ont été envoye sont :" + chaineRecu);
-            D.dessiner(chaineRecu);
-            D.afficher();
+            while(!Thread.interrupted()) {
+                chaineRecu = fluxEntrant.readLine();
+                if(chaineRecu != null) {
+                    System.out.println("Les coordonnée qui ont été envoye sont :" + chaineRecu );
+                    D.dessiner(chaineRecu);
+                }
+                else{
+                    D.afficher();
+                }
+            }
         }
         catch (InterruptedException e) {
             e.printStackTrace();
