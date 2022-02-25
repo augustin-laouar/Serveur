@@ -20,9 +20,17 @@ public class Interlocuteur extends Thread {
         String chaineRecu;
 
         try {
-            Dessin D = new Dessin("Test de dessin",1000,1000);
+            //on recupere une premier fois la premiere requete qui nous dit quelles sont les coordonnees
+            //format 0;width;height
+            chaineRecu=fluxEntrant.readLine();
+            String s[]= chaineRecu.split(";");
+            int width= Integer.parseInt(s[1]);
+            int height= Integer.parseInt(s[2]);
+
+            Dessin D = new Dessin("Test de dessin",width,height);
             Ecouteur f = new Ecouteur();
             D.addWindowListener(f);
+
             while(!Thread.interrupted()) {
                 chaineRecu = fluxEntrant.readLine();
                 if(chaineRecu != null) {

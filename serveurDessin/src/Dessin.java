@@ -21,6 +21,7 @@ public class Dessin extends Frame {
         Thread.sleep(150);
         strategie = this.getBufferStrategy();
         graphics = (Graphics2D) strategie.getDrawGraphics();
+        this.setResizable(false);
 
     }
 
