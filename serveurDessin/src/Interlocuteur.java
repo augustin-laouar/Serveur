@@ -30,7 +30,7 @@ public class Interlocuteur extends Thread {
             Dessin D = new Dessin("Test de dessin",width,height);
             Ecouteur f = new Ecouteur();
             D.addWindowListener(f);
-
+            System.out.println("Taille de la fenetre : " + width +" , " + height);
             while(!Thread.interrupted()) {
                 chaineRecu = fluxEntrant.readLine();
                 if(chaineRecu != null) {
