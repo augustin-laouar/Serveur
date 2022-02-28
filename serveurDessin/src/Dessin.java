@@ -10,13 +10,13 @@ public class Dessin extends Frame {
     private Graphics2D graphics;
     private int width;
     private int height;
-    public static final int boundsX = 0;
-    public static final int boundsY = 50;
+    //public static final int boundsX = 100;//test
+   // public static final int boundsY = 100;
     public Dessin(String msg, int w, int h) throws InterruptedException {
         super(msg);
         width = w;
         height = h;
-        this.setBounds(boundsX,boundsY,width + boundsX,height + boundsY);
+        this.setSize(width,height);
         this.setVisible(true);
         this.setIgnoreRepaint(true);
         this.createBufferStrategy(2);
