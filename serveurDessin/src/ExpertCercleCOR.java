@@ -19,7 +19,7 @@ public class ExpertCercleCOR extends ExpertDessinCOR {
             String point[] =sousChaine[3].split(",") ;
            /* Shape cercle = new Ellipse2D.Double(Double.parseDouble(point[0]),Double.parseDouble(point[1]),Double.parseDouble(sousChaine[2]),Double.parseDouble(sousChaine[2]));
             g.draw(cercle);*/
-            g.fillOval(Integer.parseInt(point[0]) + Dessin.boundsX,Integer.parseInt(point[1]) + Dessin.boundsY,Integer.parseInt(sousChaine[2]),Integer.parseInt(sousChaine[2]));
+            g.fillOval(Integer.parseInt(point[0]) ,Integer.parseInt(point[1]),Integer.parseInt(sousChaine[2]),Integer.parseInt(sousChaine[2]));
             return true;
         }
         return false;

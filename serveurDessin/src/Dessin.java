@@ -16,14 +16,15 @@ public class Dessin extends Frame {
         super(msg);
         width = w;
         height = h;
-        this.setBounds(boundsX,boundsY,width + boundsX,height + boundsY);
+        //this.setBounds(boundsX,boundsY,width + boundsX,height + boundsY);
+        this.setSize(width+100,height+100);
         this.setVisible(true);
         this.setIgnoreRepaint(true);
         this.createBufferStrategy(2);
         Thread.sleep(150);
         strategie = this.getBufferStrategy();
         graphics = (Graphics2D) strategie.getDrawGraphics();
-        this.setResizable(false);
+      //  this.setResizable(false);
 
     }
 
