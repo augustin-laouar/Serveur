@@ -29,8 +29,8 @@ public class ExpertPolygoneCOR extends ExpertDessinCOR{
             for (int i=0; i<nbPoints; i++)
             {
                     xiyi[i]=sousChaine[i+2].split(",");
-                    x[i]=Integer.parseInt(xiyi[i][0]) ;
-                    y[i]=Integer.parseInt(xiyi[i][1]) ;
+                    x[i]=Integer.parseInt(xiyi[i][0]);
+                    y[i]=Integer.parseInt(xiyi[i][1]);
             }
 
             Polygon p = new Polygon(x, y,x.length );
