@@ -10,8 +10,10 @@ public class Dessin extends Frame {
     private Graphics2D graphics;
     private int width;
     private int height;
-    //public static final int boundsX = 100;//test
-   // public static final int boundsY = 100;
+
+    /**
+     * @brief creation de fenetre
+     * */
     public Dessin(String msg, int w, int h) throws InterruptedException {
         super(msg);
         width = w;
@@ -53,6 +55,9 @@ public class Dessin extends Frame {
         graphics.setColor(Color.white);
         graphics.fillRect(0,0,width,height);
     }
+    /**
+     * dessiner une forme represene par un string s en utilisant le design pattern COR
+     * */
     public void dessiner(String s){
 
         ExpertCercleCOR e1 = new ExpertCercleCOR(null);
