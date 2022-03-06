@@ -12,7 +12,9 @@ public class Communication {
         adresse=chaine;
     }
 
-
+/**
+ *  methode permettant de lancer la communication en creant une socket  avec l'adresse et le numero de port necessaire
+ */
 
     public void communiquer(){
         try {

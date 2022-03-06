@@ -7,6 +7,10 @@ public class ExpertTraitCOR extends ExpertDessinCOR{
     protected ExpertTraitCOR(ExpertDessinCOR suivant) {
         super(suivant);
     }
+
+   /**
+    * dessiner un trait si la requete recu correspond a celle d'un cercle
+    * */
     public boolean Dessiner(String s, Graphics2D g) {
         // 1;nbPoints;x1,y1;x2,y2;r,g,b
         String sousChaine[]=s.split(";");

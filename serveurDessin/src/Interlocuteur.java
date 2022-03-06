@@ -16,11 +16,14 @@ public class Interlocuteur extends Thread {
         this.fluxEntrant = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 
     }
+    /**
+     * methode permettant de receptionner les requetes et les traiter
+     * */
     public void run() {
         String chaineRecu;
 
         try {
-            //on recupere une premier fois la premiere requete qui nous dit quelles sont les coordonnees
+            //on recupere une premier fois la premiere requete qui nous dit quelle est la taille de la fenetre
             //format 0;width;height
             chaineRecu=fluxEntrant.readLine();
             String s[]= chaineRecu.split(";");

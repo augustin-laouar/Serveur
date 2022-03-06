@@ -5,10 +5,14 @@ public class ExpertPolygoneCOR extends ExpertDessinCOR{
         super(suivant);
     }
 
+    /**
+     * methode pour dessiner un polygone si la requete recu correspond a un polygone
+     * */
 
     public boolean Dessiner(String s, Graphics2D g) {
         //pour un polygone ou le string sera de forme  3;nombrePoint;x1,y1;x2,y2;...
-        //3;6;410,460;460,415;500,425;480,435;550,445;410,460;colorRgb
+
+        //exemple : 3;6;410,460;460,415;500,425;480,435;550,445;410,460;colorRgb
         String sousChaine[]= s.split(";");
         int cl[] = new int[3];
 
